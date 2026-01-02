@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Tutor Bot – Vibration Analysis</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #0f172a;
+            color: white;
+            text-align: center;
+            padding: 40px;
+        }
+        .card {
+            background: #1e293b;
+            padding: 20px;
+            margin: 15px auto;
+            width: 60%;
+            border-radius: 12px;
+        }
+        button {
+            padding: 12px 20px;
+            margin: 8px;
+            border: none;
+            border-radius: 8px;
+            background: #38bdf8;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #0ea5e9;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>🤖 AI Tutor Bot</h1>
+<p>Select a topic to learn</p>
+
+<div class="card">
+    <button onclick="show('spring')">Spring–Mass System</button>
+    <button onclick="show('vibration')">Vibration</button>
+    <button onclick="show('matrix')">Matrices</button>
+    <button onclick="show('eigenvalue')">Eigenvalues</button>
+    <button onclick="show('eigenvector')">Eigenvectors</button>
+</div>
+
+<div class="card" id="content">
+    <p>Click a topic to see explanation</p>
+</div>
+
+<script>
+function show(topic) {
+    const text = {
+        spring: "A spring–mass system vibrates when displaced. The motion depends on mass and spring constant.",
+        vibration: "Vibration is oscillatory motion around equilibrium. It is analyzed to prevent failures.",
+        matrix: "Matrices represent equations of motion in multi-degree systems.",
+        eigenvalue: "Eigenvalues represent natural frequencies of vibration.",
+        eigenvector: "Eigenvectors represent mode shapes of vibration."
+    };
+    document.getElementById("content").innerText = text[topic];
+}
+</script>
+
+</body>
+</html>
